@@ -23,6 +23,15 @@ increment = () => {
   }
 }
 
+addMinute = () => {
+  if (this.state.seconds === 60) {
+    this.setState({
+      minutes: this.state.minutes + 1,
+      seconds: this.state.seconds = 0
+    })
+  }
+}
+
 startTimer = () => {
   this.setState({
     start: 1
@@ -38,6 +47,7 @@ stopTimer = () => {
 componentDidMount() {
   setInterval(() => {
     this.increment()
+    this.addMinute()
   }, 100);
 }
   
