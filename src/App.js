@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: 0,
+      seconds: 0,
       start: 0
     }
   }
@@ -16,7 +16,7 @@ class App extends React.Component {
 increment = () => {
   if (this.state.start === 1){
     this.setState({
-      time: this.state.time + 1
+      seconds: this.state.seconds + 1
     })
   }
 }
@@ -42,7 +42,7 @@ componentDidMount() {
 render() {
   return (
     <div className="App">
-      <Stopwatch time={this.state.time} />
+      <Stopwatch seconds={this.state.seconds} />
       <StartButton startTimer={this.startTimer}/>
       <StopButton stopTimer={this.stopTimer} />
     </div>
