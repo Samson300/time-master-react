@@ -27,6 +27,12 @@ startTimer = () => {
   })
 }
 
+stopTimer = () => {
+  this.setState({
+    start:0
+  })
+}
+
 componentDidMount() {
   setInterval(() => {
     this.increment()
@@ -38,7 +44,7 @@ render() {
     <div className="App">
       <Stopwatch time={this.state.time} />
       <StartButton startTimer={this.startTimer}/>
-      <StopButton />
+      <StopButton stopTimer={this.stopTimer} />
     </div>
   );
 }
