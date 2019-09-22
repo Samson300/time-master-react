@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Timer(props) {
+export default function Stopwatch(props) {
     return(
         <div>
             {
-                <p>{ props.counter }</p>
+                <p>{ props.time }</p>
             }
         </div>
     )

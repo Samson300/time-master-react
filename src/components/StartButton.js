@@ -1,7 +1,9 @@
 import React from "react";
 
-export default function StartButton() {
+export default function StartButton(props) {
     return (
-        <button className="startButton">Start</button>
+        <button className="startButton" onClick={() => {
+            props.startTimer();
+        }} >Start</button>
     )
 }

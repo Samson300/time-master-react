@@ -8,19 +8,40 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: 0
+      time: 0,
+      start: 0
     }
   }
-  
-  render() {
-    return (
-      <div className="App">
-        <Stopwatch counter={this.state.counter} />
-        <StartButton />
-        <StopButton />
-      </div>
-    );
+
+increment = () => {
+  if (this.state.start === 1){
+    this.setState({
+      time: this.state.time + 1
+    })
   }
+}
+
+startTimer = () => {
+  this.setState({
+    start: 1
+  })
+}
+
+componentDidMount() {
+  setInterval(() => {
+    this.increment()
+  }, 100);
+}
+  
+render() {
+  return (
+    <div className="App">
+      <Stopwatch time={this.state.time} />
+      <StartButton startTimer={this.startTimer}/>
+      <StopButton />
+    </div>
+  );
+}
 }
 
 export default App;
