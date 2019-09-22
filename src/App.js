@@ -58,7 +58,7 @@ componentDidMount() {
     this.increment()
     this.addMinute()
     this.addHour()
-  }, 10);
+  }, 1000);
 }
   
 render() {
