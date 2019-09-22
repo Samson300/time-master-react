@@ -44,7 +44,7 @@ componentDidMount() {
 render() {
   return (
     <div className="App">
-      <Stopwatch seconds={this.state.seconds} />
+      <Stopwatch seconds={this.state.seconds} minutes={this.state.minutes} hours={this.state.hours}/>
       <StartButton startTimer={this.startTimer}/>
       <StopButton stopTimer={this.stopTimer} />
     </div>
