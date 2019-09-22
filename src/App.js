@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Stopwatch from './components/Stopwatch'
 import StartButton from "./components/StartButton"
+import StopButton from "./components/StopButton"
 
 class App extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends React.Component {
       <div className="App">
         <Stopwatch counter={this.state.counter} />
         <StartButton />
+        <StopButton />
       </div>
     );
   }
