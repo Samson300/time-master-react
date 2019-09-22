@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
       seconds: 0,
       minutes: 0,
+      hours: 0,
       start: 0
     }
   }
