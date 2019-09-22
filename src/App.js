@@ -9,6 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       seconds: 0,
+      minutes: 0,
       start: 0
     }
   }
