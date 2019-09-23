@@ -13,7 +13,8 @@ class App extends React.Component {
       minutes: 0,
       hours: 0,
       start: 0,
-      countdown: 0
+      countdown: 0,
+      total: ''
     }
   }
 
@@ -55,6 +56,12 @@ stopTimer = () => {
   })
 }
 
+setCountDownTime = (time) => {
+  this.setState({
+    countdown: time
+  })
+}
+
 componentDidMount() {
   setInterval(() => {
     this.increment()
@@ -69,7 +76,7 @@ render() {
       <Stopwatch seconds={this.state.seconds} minutes={this.state.minutes} hours={this.state.hours}/>
       <StartButton startTimer={this.startTimer}/>
       <StopButton stopTimer={this.stopTimer} />
-      <CountDown countdown={this.state.countdown} />
+      <CountDown countdown={this.state.countdown} setCountDownTime={this.setCountDownTime} />
     </div>
   );
 }
