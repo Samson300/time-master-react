@@ -3,6 +3,7 @@ import './App.css';
 import Stopwatch from './components/Stopwatch'
 import StartButton from "./components/StartButton"
 import StopButton from "./components/StopButton"
+import CountDown from "./components/CountDown"
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class App extends React.Component {
       seconds: 0,
       minutes: 0,
       hours: 0,
-      start: 0
+      start: 0,
+      countdown: 0
     }
   }
 
@@ -67,6 +69,7 @@ render() {
       <Stopwatch seconds={this.state.seconds} minutes={this.state.minutes} hours={this.state.hours}/>
       <StartButton startTimer={this.startTimer}/>
       <StopButton stopTimer={this.stopTimer} />
+      <CountDown countdown={this.countdown} />
     </div>
   );
 }
