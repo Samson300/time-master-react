@@ -68,11 +68,20 @@ startCountDownTimer = () => {
   })
 }
 
+decrement = () => {
+  if (this.startCountDownTimer === 1) {
+    this.setState({
+      countdown: this.state.countdown - 1
+    })
+  }
+}
+
 componentDidMount() {
   setInterval(() => {
     this.increment()
     this.addMinute()
     this.addHour()
+    this.decrement()
   }, 1000);
 }
   
