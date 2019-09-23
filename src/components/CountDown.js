@@ -4,14 +4,12 @@ export default function CountDown(props) {
     return (
         <div>
             <h1>CountDown</h1>
-            <p>{props.countdown}</p>
             <form>
             <div class="form-group">
-                <p></p>
+            <p>{props.countdown}</p>
                 <input
-                    value={props.total}
                     onChange={(e) => {
-                        props.setCountDownTime(e.target.value);
+                        props.setCountDownTimer(e.target.value);
                     }}
                     type="number"
                     className="form-control"

@@ -4,6 +4,7 @@ import Stopwatch from './components/Stopwatch'
 import StartButton from "./components/StartButton"
 import StopButton from "./components/StopButton"
 import CountDown from "./components/CountDown"
+import StartCountDownButton from "./components/StartCountDownButton"
 
 class App extends React.Component {
   constructor(props) {
@@ -13,8 +14,8 @@ class App extends React.Component {
       minutes: 0,
       hours: 0,
       start: 0,
-      countdown: 0,
-      startCountDown: 0
+      countdown: 30,
+      startCountDown: 1
     }
   }
 
@@ -69,7 +70,7 @@ startCountDownTimer = () => {
 }
 
 decrement = () => {
-  if (this.startCountDownTimer === 1) {
+  if (this.startCountDown === 1) {
     this.setState({
       countdown: this.state.countdown - 1
     })
@@ -91,7 +92,8 @@ render() {
       <Stopwatch seconds={this.state.seconds} minutes={this.state.minutes} hours={this.state.hours}/>
       <StartButton startTimer={this.startTimer}/>
       <StopButton stopTimer={this.stopTimer} />
-      <CountDown countdown={this.state.countdown} setCountDownTime={this.setCountDownTime} />
+      <CountDown countdown={this.state.countdown} setCountDownTimer={this.setCountDownTimer} />
+      <StartCountDownButton startCountDownTimer={this.startCountDownTimer} />
     </div>
   );
 }
