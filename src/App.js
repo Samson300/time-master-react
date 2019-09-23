@@ -69,7 +69,7 @@ render() {
       <Stopwatch seconds={this.state.seconds} minutes={this.state.minutes} hours={this.state.hours}/>
       <StartButton startTimer={this.startTimer}/>
       <StopButton stopTimer={this.stopTimer} />
-      <CountDown countdown={this.countdown} />
+      <CountDown countdown={this.state.countdown} />
     </div>
   );
 }
