@@ -5,14 +5,13 @@ export default function CountDown(props) {
         <div>
             <h1>CountDown</h1>
             <form>
-            <div class="form-group">
+            <div>
             <p>{props.countdown}</p>
                 <input
                     onChange={(e) => {
                         props.setCountDownTimer(e.target.value);
                     }}
                     type="number"
-                    className="form-control"
                     id="totalTime"
                     placeholder="Input Time"
                 ></input>
