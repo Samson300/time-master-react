@@ -14,7 +14,7 @@ class App extends React.Component {
       hours: 0,
       start: 0,
       countdown: 0,
-      total: ''
+      startCountDown: 0
     }
   }
 
@@ -59,6 +59,12 @@ stopTimer = () => {
 setCountDownTime = (time) => {
   this.setState({
     countdown: time
+  })
+}
+
+startCountDownTimer = () => {
+  this.setState({
+    startCountDown: 1
   })
 }
 
