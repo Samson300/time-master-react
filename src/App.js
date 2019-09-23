@@ -27,7 +27,15 @@ increment = () => {
     })
   }
 }
+decrement = () => {
+  if (this.state.startCountDown === 1) {
+    this.setState({
+    countdown: this.state.countdown - 1
+    })
+  }
+}
 
+// StopWatch
 addMinute = () => {
   if (this.state.seconds === 60) {
     this.setState({
@@ -58,6 +66,7 @@ stopTimer = () => {
   })
 }
 
+// CountDown
 setCountDownTimer = (time) => {
   this.setState({
     countdown: time
@@ -76,21 +85,12 @@ stopCountDownTimer = () => {
   })
 }
 
-decrement = () => {
-  if (this.state.startCountDown === 1) {
-    console.log("this is running")
-    this.setState({
-      countdown: this.state.countdown - 1
-    })
-  }
-}
-
 componentDidMount() {
   setInterval(() => {
     this.increment()
+    this.decrement()
     this.addMinute()
     this.addHour()
-    this.decrement()
   }, 1000);
 }
   
