@@ -5,6 +5,7 @@ import StartButton from "./components/StartButton"
 import StopButton from "./components/StopButton"
 import CountDown from "./components/CountDown"
 import StartCountDownButton from "./components/StartCountDownButton"
+import StopCountDownButton from "./components/StopCountDownButton"
 
 class App extends React.Component {
   constructor(props) {
@@ -69,6 +70,12 @@ startCountDownTimer = () => {
   })
 }
 
+stopCountDownTimer = () => {
+  this.setState({
+    startCountDown: 0
+  })
+}
+
 decrement = () => {
   if (this.state.startCountDown === 1) {
     console.log("this is running")
@@ -95,6 +102,7 @@ render() {
       <StopButton stopTimer={this.stopTimer} />
       <CountDown countdown={this.state.countdown} setCountDownTimer={this.setCountDownTimer} />
       <StartCountDownButton startCountDownTimer={this.startCountDownTimer} />
+      <StopCountDownButton stopCountDownTimer={this.stopCountDownTimer} />
     </div>
   );
 }
