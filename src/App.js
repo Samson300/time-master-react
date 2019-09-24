@@ -17,7 +17,8 @@ class App extends React.Component {
       hours: 0,
       start: 0,
       countdown: 30,
-      startCountDown: 0
+      startCountDown: 0,
+      alarmTime: 800
     }
   }
 
@@ -104,7 +105,7 @@ render() {
       <CountDown countdown={this.state.countdown} setCountDownTimer={this.setCountDownTimer} />
       <StartCountDownButton startCountDownTimer={this.startCountDownTimer} />
       <StopCountDownButton stopCountDownTimer={this.stopCountDownTimer} />
-      <Alarm />
+      <Alarm alarmTime={this.state.alarmTime}/>
     </div>
   );
 }
