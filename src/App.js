@@ -6,6 +6,7 @@ import StopButton from "./components/StopButton"
 import CountDown from "./components/CountDown"
 import StartCountDownButton from "./components/StartCountDownButton"
 import StopCountDownButton from "./components/StopCountDownButton"
+import Alarm from "./components/Alarm"
 
 class App extends React.Component {
   constructor(props) {
@@ -103,6 +104,7 @@ render() {
       <CountDown countdown={this.state.countdown} setCountDownTimer={this.setCountDownTimer} />
       <StartCountDownButton startCountDownTimer={this.startCountDownTimer} />
       <StopCountDownButton stopCountDownTimer={this.stopCountDownTimer} />
+      <Alarm />
     </div>
   );
 }
