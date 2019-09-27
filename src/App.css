@@ -6,3 +6,7 @@
 h1, p {
   color: white;
 }
+
+#timePic {
+  background-image: url(images/hourglass.jpeg);
+}
