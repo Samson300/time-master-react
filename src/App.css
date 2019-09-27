@@ -9,4 +9,5 @@ h1, p {
 
 #timePic {
   background-image: url(images/hourglass.jpeg);
+  height: 500px;
 }
