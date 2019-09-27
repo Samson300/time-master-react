@@ -105,9 +105,9 @@ render() {
       <CountDown countdown={this.state.countdown} setCountDownTimer={this.setCountDownTimer} />
       <StartCountDownButton startCountDownTimer={this.startCountDownTimer} />
       <StopCountDownButton stopCountDownTimer={this.stopCountDownTimer} />
-      <Alarm alarmTime={this.state.alarmTime}/>
       <div id="timePic">
         <p>Time Magicians</p>
+      <Alarm alarmTime={this.state.alarmTime}/>
       </div>
     </div>
   );
